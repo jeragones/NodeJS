@@ -1,0 +1,41 @@
+input {
+  line-height:30px;
+  font-size:20px;
+}
+
+.ngyn-picker-selection {
+  padding-left: 4px;
+  padding-right:2px;
+  margin-right:5px;
+  border-radius:3px;
+  background-color: rgb(238, 238, 238);
+  float:left;
+}
+.ngyn-picker-options {
+  max-height:200px;
+  position: absolute;
+  border:solid 1px rgb(180,180,180);
+}
+.ngyn-picker-option:hover {
+  background-color: rgb(51, 153, 255); /* use a mid blue if highlight system color isn't available */
+  background-color: highlight;
+  color:white;
+  cursor:pointer;
+}
+.ngyn-picker-remove-selection {
+  color:#888888;
+  cursor:pointer;
+}
+.ngyn-picker-remove-selection:hover {
+  color:#880000;
+}
+.ngyn-picker-add-selection {
+  width:auto;
+  display:inline-block;
+  outline:none;
+  min-width:40px;
+  white-space: nowrap;
+}
+.ngyn-picker-placeholder {
+  color:#aaaaaa;
+}

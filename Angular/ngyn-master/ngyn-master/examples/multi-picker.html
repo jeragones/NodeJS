@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <script src="../libs/angular.js"></script>
+  <script src="../src/ui-multi-picker/ui-multi-picker.js"></script>
+  <script type="text/javascript">
+    angular.module('app', ['ngyn-ui-multi-picker'])
+      .config(function() {
+
+      })
+      .controller('testController', function( $scope ) {
+        $scope.availablePeople = [ {
+          firstname: 'Anders',
+          surname: 'Hejlsberg',
+          title: 'Technical Fellow',
+          picture: 'images/Anders.jpg'
+        },
+        {
+          firstname: 'Steve',
+          surname: 'Ballmer',
+          title: 'Senior Microsoft Developer Entertainer',
+          picture: 'images/Ballmer.jpg'
+        } ];
+
+        $scope.selectedPeople = [];
+      })
+  </script>
+  <link rel="stylesheet" href="css/multi-picker.css">
+</head>
+<body>
+  <div ng-controller="testController">
+    <ngyn-multi-picker options="person in availablePeople" ng-model="selectedPeople">
+      <picker-selection>
+        {{ person.surname}}
+      </picker-selection>
+      <picker-option>
+        <div style="height:60px;">
+          <img style="width:40px;float:left;" ng-src="{{person.picture}}">
+          <div style="float:left">
+            <strong>{{person.firstname}} {{person.surname}}</strong><br />
+            <em>{{person.title}}</em>
+          </div>
+          <div style="clear:both"></div>
+        </div>
+      </picker-option>
+    </ngyn-multi-picker>
+  </div>
+</body>
+
+</html>

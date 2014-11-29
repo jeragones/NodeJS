@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form(action='/', method='post' id="pepe")
+		input(id="txtBox")
+		button(id="btnAction") Press
+		div(id="contenedor")

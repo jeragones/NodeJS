@@ -1,0 +1,12 @@
+select, input[type="hidden"] {
+  width:90%;
+}
+p, .code {
+  line-height: 14pt;
+}
+.code {
+  padding:2px;
+  border:solid 1px #dddddd;
+  background-color:#eeeeee;
+  border-radius: 3px;
+}

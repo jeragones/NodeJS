@@ -1,0 +1,28 @@
+{
+  "name": "ngyn",
+  "version": "0.0.0",
+  "description": "Karma and jasmine test runners for ngyn",
+  "devDependencies": {
+    "karma": "0.12.4",
+    "karma-jasmine": "0.1.5",
+    "karma-phantomjs-launcher" : "0.1.4",
+    "karma-teamcity-reporter": "0.1.1",
+    "karma-coverage": "0.2.1",
+    "phantomjs": "1.9.7-8",
+    "grunt": "0.4.4",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-contrib-concat": "0.4.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-karma": "0.8.2",
+    "grunt-exec": "0.4.5",
+    "rimraf": "2.2.8"
+  },
+  "engines": {
+    "node": ">0.10.6"
+  },
+  "scripts": {
+    "pretest": "node node_modules/grunt-cli/bin/grunt build",
+    "test": "node node_modules/grunt-cli/bin/grunt test"
+  }
+}
